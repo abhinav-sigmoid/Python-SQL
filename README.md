@@ -1,4 +1,4 @@
-# Python-SQL Assignment by Shivam Raj
+# Python-SQL Assignment by Abhinav Anand
 Prerequisites:
 1.	Install Postgres locally on your laptop if not done already
 2.	Insert dummy data using the below script
