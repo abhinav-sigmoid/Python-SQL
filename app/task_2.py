@@ -34,6 +34,6 @@ def task_2_select():
 def task_2():
     task_2_update()
     # Path to store the xlxs
-    path = "/Users/shivamraj/Documents/Learning/python-sql/data/task_2.xlsx"
+    path = "/Users/abhinav/Documents/Learning/python-sql/data/task_2.xlsx"
     convert_to_xlsx_for_task_2(task_2_select(), path)
     print(task_2_select())
