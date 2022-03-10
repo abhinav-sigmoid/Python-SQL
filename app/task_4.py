@@ -6,7 +6,7 @@ from main_db import MyDatabase
 
 def task_4_group_by():
     try:
-        location = '/Users/shivamraj/Documents/Learning/python-sql/data/task_2_4.xlsx'
+        location = '/Users/abhinav/Documents/Learning/python-sql/data/task_2_4.xlsx'
         # Reading excel file as data frame
         df = pd.read_excel(location)
         # Grouping by Dept No and Dept Name for Total Compensation
@@ -34,6 +34,6 @@ def task_2_select():
 
 
 def task_4():
-    path = "/Users/shivamraj/Documents/Learning/python-sql/data/task_2_4.xlsx"
+    path = "/Users/abhinav/Documents/Learning/python-sql/data/task_2_4.xlsx"
     convert_to_xlsx_for_task_2_4(task_2_select(), path)
     task_4_group_by()
