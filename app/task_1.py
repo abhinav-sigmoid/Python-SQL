@@ -18,6 +18,6 @@ def task_1_select_query():
 
 
 def task_1():
-    path = "/Users/shivamraj/Documents/Learning/python-sql/data/task_1.xlsx"
+    path = "/Users/abhinav/Documents/Learning/python-sql/data/task_1.xlsx"
     # To convert into xlxs with required headers
     convert_to_xlsx_for_task_1(task_1_select_query(), path)
