@@ -21,7 +21,11 @@ def task_2_select():
     try:
         db = MyDatabase()
         # Listing the compensation
-        select_pipeline = """SELECT emp.ename, jh.empno, dept.dname,round((jh.enddate - jh.startdate)/30) * jh.sal as total_compensation,round((enddate - startdate)/30) as emp_month_spent from jobhist as jh inner join emp on (jh.empno = emp.empno) inner join dept on (jh.deptno = dept.deptno);"""
+        select_pipeline = """"select emp.empno as employee_number, emp.ename as employee_name, dept.dname as department_name, "
+                "sum(round((jh.enddate - jh.startdate)/30) * jh.sal) as "
+                "total_compensation, sum(date_part('month',age(jh.enddate, jh.startdate))) as employee_month_spent from "
+                "emp join dept on emp.deptno = dept.deptno join jobhist as jh on emp.empno = jh.empno GROUP BY "
+                "emp.empno, emp.ename, dept.dname;""""
         result = db.query(select_pipeline)
         logging.debug(f"Query Executed- {select_pipeline}")
         return result
