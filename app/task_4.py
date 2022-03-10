@@ -13,7 +13,7 @@ def task_4_group_by():
         new_df = df.groupby(["deptno", "dname"]).agg({"total_compensation": sum}).reset_index().rename(
             columns={"deptno": "Dept No", "dname": "Dept Name", "total_compensation": "Compensation"})
         # Create new xlxs and write all data into it
-        new_df.to_excel("/Users/shivamraj/Documents/Learning/python-sql/data/task_4.xlsx", header=True, index=False)
+        new_df.to_excel("/Users/abhinav/Documents/Learning/python-sql/data/task_4.xlsx", header=True, index=False)
         logging.info("Task 4 completed!!!")
     except Exception as e:
         logging.error(e)
